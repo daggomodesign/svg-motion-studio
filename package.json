@@ -1,0 +1,21 @@
+{
+  "name": "svg-motion-studio",
+  "private": true,
+  "version": "0.0.1",
+  "description": "Clean-room SVG animation studio: engine, CLI, editor and MCP server. Runs in the browser, Node.js and Termux.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daggomodesign/svg-motion-studio.git"
+  },
+  "workspaces": [
+    "packages/*"
+  ],
+  "engines": {
+    "node": ">=18.17"
+  },
+  "scripts": {
+    "build": "npm run build --workspaces --if-present",
+    "test": "npm run test --workspaces --if-present"
+  }
+}
