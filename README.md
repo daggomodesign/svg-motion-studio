@@ -4,7 +4,7 @@
 
 [Leia em português (pt-PT)](README.pt-PT.md)
 
-> Status: **pre-alpha** — M1 (engine kernel) in development.
+> Status: **pre-alpha** — M1 (engine kernel) done; M2 (SVG pipeline + animated SVG export) next.
 
 ## What it is
 
@@ -60,10 +60,11 @@ Layering rule: `core` depends on nothing; `svg` and `export` depend on `core`; `
 ## Roadmap
 
 - [x] **M0** — repository, clean-room policy, functional spec
-- [ ] **M1** — engine kernel: keyframes, easing, sampling, timeline model
+- [x] **M1** — engine kernel: keyframes, easing, value types (number, vector, color, path),
+  sampling, timeline math, scene model ([packages/core](packages/core/README.md))
 - [ ] **M2** — SVG pipeline + animated SVG (SMIL/CSS) exporters
 - [ ] **M3** — CLI (`build`, `export`, `serve`) + Termux quick-start guide
-- [ ] **M4** — web editor: canvas, layers, animators, timeline
+- [ ] **M4** — web editor (Preact/Lit, no heavy toolchain): canvas, layers, animators, timeline
 - [ ] **M5** — MCP server, Lottie + video exporters, APK shell
 
 ## Documentation

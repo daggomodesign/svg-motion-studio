@@ -1,6 +1,6 @@
 # SVG Motion Studio — Functional Specification
 
-**Version:** 0.1 (M0 draft) · **Status:** evolving.
+**Version:** 0.2 (M1) · **Status:** evolving.
 
 This is our own specification, written clean-room from the public, observable behavior of
 the class of tools it belongs to. See [CLEANROOM.md](CLEANROOM.md) for methodology and
@@ -77,7 +77,34 @@ programmatic play/pause/seek on exported outputs whenever the target format supp
 - Zero DOM/Node dependencies in `core`.
 - Deterministic exports: same input, same output bytes.
 
-## 10. Non-goals for M1
+## 10. Scene format (v1)
+
+A scene is plain JSON, owned by `@svg-motion-studio/core` (`Scene`, `validateScene`,
+`compileScene`, `evaluateScene`):
+
+```json
+{
+  "version": 1, "width": 512, "height": 512,
+  "duration": 2, "fps": 60, "loop": "loop",
+  "animators": [
+    { "id": "spin", "target": "logo", "property": "rotate",
+      "keyframes": [{ "t": 0, "value": 0 }, { "t": 2, "value": 360, "ease": "ease-in-out" }] },
+    { "id": "pop", "target": "dot", "property": "fill", "trigger": { "type": "click" },
+      "keyframes": [{ "t": 0, "value": "#ff3366" }, { "t": 0.5, "value": "transparent" }] }
+  ]
+}
+```
+
+- Value kinds: `number`, `vector` (`translate`, `scale`, `origin` take `[x, y]`), `color`
+  (hex, `rgb()`, basic names; premultiplied interpolation) and `path` (morph requires the
+  same command structure after normalization to absolute `M L C Q A Z`).
+- Each animator runs on its own clock: autoplay starts at `delay`; click / hover / manual
+  start when the runtime records an activation time. The scene `loop` / `iterations`
+  settings map that clock onto the timeline.
+- When two animators drive the same element property, the later one wins (validation
+  warns).
+
+## 11. Non-goals for M1
 
 Editor UI, video pipeline, Lottie and the MCP server — they arrive after the engine
 kernel (model, easing, sampling, timeline math) is proven by tests.

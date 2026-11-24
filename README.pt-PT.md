@@ -4,7 +4,7 @@
 
 [Read in English](README.md)
 
-> Estado: **pré-alfa** — M1 (núcleo do motor) em desenvolvimento.
+> Estado: **pré-alfa** — M1 (núcleo do motor) concluído; segue-se o M2 (pipeline SVG + exportação SVG animado).
 
 ## O que é
 
@@ -59,10 +59,11 @@ Regra de camadas: `core` não depende de nada; `svg` e `export` dependem de `cor
 ## Roadmap
 
 - [x] **M0** — repositório, política clean-room, especificação funcional
-- [ ] **M1** — núcleo do motor: keyframes, easing, sampling, modelo de timeline
+- [x] **M1** — núcleo do motor: keyframes, easing, tipos de valor (número, vetor, cor, path),
+  sampling, matemática de timeline, modelo de cena ([packages/core](packages/core/README.md))
 - [ ] **M2** — pipeline SVG + exportadores SVG animado (SMIL/CSS)
 - [ ] **M3** — CLI (`build`, `export`, `serve`) + guia rápido para Termux
-- [ ] **M4** — editor web: canvas, camadas, animators, timeline
+- [ ] **M4** — editor web (Preact/Lit, sem toolchain pesada): canvas, camadas, animators, timeline
 - [ ] **M5** — servidor MCP, exportadores Lottie + vídeo, casca APK
 
 ## Documentação

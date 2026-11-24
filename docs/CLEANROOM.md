@@ -30,6 +30,10 @@ Every design decision informed by an external public source gets one row.
 | 2026-11 | Public feature docs of web SVG animation tools (incl. SVGator help/marketing pages) | The feature class itself: timeline editor, animator types, triggers, export formats | [SPEC.md](SPEC.md) |
 | 2026-11 | morluto/rea (MIT, open source) | Repo-quality patterns: layered architecture, AGENTS.md, MCP surface, multi-idioma README | Repo scaffolding, AGENTS.md |
 | 2026-11 | W3C SMIL / CSS Animations / WAAPI specs | Export semantics for animated SVG | packages/export (M2) |
+| 2026-11 | W3C CSS Easing Functions Level 1 | `cubic-bezier()` semantics and x-range rule, `ease*` preset control points, `step-start` / `step-end` behavior | packages/core/src/easing.ts |
+| 2026-11 | Widely published easing equations (quad, cubic, back, bounce, elastic) | Curve formulas as general math | packages/core/src/easing.ts |
+| 2026-11 | W3C CSS Color Level 4 | Hex / `rgb()` syntax, basic named colors, premultiplied-alpha interpolation | packages/core/src/values.ts |
+| 2026-11 | W3C SVG 2 — Paths chapter (path data grammar, implementation notes) | Command grammar, implicit lineto, S/T control-point reflection, compact arc flags | packages/core/src/path.ts |
 
 ## Review checklist (per PR)
 
