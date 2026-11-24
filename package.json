@@ -9,13 +9,16 @@
     "url": "git+https://github.com/daggomodesign/svg-motion-studio.git"
   },
   "workspaces": [
-    "packages/*"
+    "packages/core",
+    "packages/svg",
+    "packages/export"
   ],
   "engines": {
-    "node": ">=18.17"
+    "node": ">=22"
   },
   "scripts": {
     "build": "npm run build --workspaces --if-present",
-    "test": "npm run test --workspaces --if-present"
+    "test": "npm run test --workspaces --if-present",
+    "demo": "npm run build && node examples/build.mjs"
   }
 }

@@ -4,7 +4,7 @@
 
 [Read in English](README.md)
 
-> Estado: **pré-alfa** — M1 (núcleo do motor) concluído; segue-se o M2 (pipeline SVG + exportação SVG animado).
+> Estado: **pré-alfa** — M1 (núcleo do motor) e M2 (pipeline SVG + exportação SVG animado) concluídos; segue-se o M3 (CLI).
 
 ## O que é
 
@@ -27,10 +27,12 @@ pkg install nodejs git          # Termux
 git clone https://github.com/daggomodesign/svg-motion-studio.git
 cd svg-motion-studio
 npm install && npm test
+npm run demo                    # gera examples/out/hello.smil.svg e hello.css.svg
 ```
 
-O editor corre hoje em qualquer browser móvel; uma casca APK (Capacitor) à volta do
-mesmo editor está planeada para quando o motor estabilizar (ver roadmap).
+Requer Node.js 22 ou superior. Abre os ficheiros em `examples/out/` em qualquer browser
+para ver a animação. O editor web (M4) vai correr em qualquer browser móvel; uma casca
+APK (Capacitor) à volta dele está planeada para quando o motor estabilizar (ver roadmap).
 
 ## Política clean-room
 
@@ -61,7 +63,8 @@ Regra de camadas: `core` não depende de nada; `svg` e `export` dependem de `cor
 - [x] **M0** — repositório, política clean-room, especificação funcional
 - [x] **M1** — núcleo do motor: keyframes, easing, tipos de valor (número, vetor, cor, path),
   sampling, matemática de timeline, modelo de cena ([packages/core](packages/core/README.md))
-- [ ] **M2** — pipeline SVG + exportadores SVG animado (SMIL/CSS)
+- [x] **M2** — pipeline SVG + exportadores SVG animado (SMIL/CSS)
+  ([packages/svg](packages/svg), [packages/export](packages/export))
 - [ ] **M3** — CLI (`build`, `export`, `serve`) + guia rápido para Termux
 - [ ] **M4** — editor web (Preact/Lit, sem toolchain pesada): canvas, camadas, animators, timeline
 - [ ] **M5** — servidor MCP, exportadores Lottie + vídeo, casca APK

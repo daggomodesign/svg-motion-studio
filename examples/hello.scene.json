@@ -1,0 +1,19 @@
+{
+  "version": 1,
+  "width": 200,
+  "height": 200,
+  "duration": 2,
+  "fps": 60,
+  "loop": "loop",
+  "background": "#f4f1ea",
+  "animators": [
+    { "id": "origin", "target": "square", "property": "origin",
+      "keyframes": [{ "t": 0, "value": [100, 100] }] },
+    { "id": "spin", "target": "square", "property": "rotate",
+      "keyframes": [{ "t": 0, "value": 0 }, { "t": 2, "value": 360, "ease": "ease-in-out" }] },
+    { "id": "tint", "target": "square", "property": "fill",
+      "keyframes": [{ "t": 0, "value": "#ff3366" }, { "t": 1, "value": "#3366ff" }, { "t": 2, "value": "#ff3366" }] },
+    { "id": "drop", "target": "dot", "property": "cy",
+      "keyframes": [{ "t": 0, "value": 30 }, { "t": 1.2, "value": 170, "ease": "bounce-out" }, { "t": 2, "value": 30, "ease": "ease-in-out" }] }
+  ]
+}

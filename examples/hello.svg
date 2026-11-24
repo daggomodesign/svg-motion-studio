@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <!-- Hello scene: a spinning, color-shifting square and a bouncing dot. -->
+  <rect id="square" x="60" y="60" width="80" height="80" rx="12" fill="#ff3366"/>
+  <circle id="dot" cx="100" cy="30" r="12" fill="#222"/>
+</svg>

@@ -4,7 +4,7 @@
 
 [Leia em português (pt-PT)](README.pt-PT.md)
 
-> Status: **pre-alpha** — M1 (engine kernel) done; M2 (SVG pipeline + animated SVG export) next.
+> Status: **pre-alpha** — M1 (engine kernel) and M2 (SVG pipeline + animated SVG export) done; M3 (CLI) next.
 
 ## What it is
 
@@ -27,10 +27,12 @@ pkg install nodejs git          # Termux
 git clone https://github.com/daggomodesign/svg-motion-studio.git
 cd svg-motion-studio
 npm install && npm test
+npm run demo                    # writes examples/out/hello.smil.svg and hello.css.svg
 ```
 
-The editor UI runs in any mobile browser today; a Capacitor APK shell around the same
-editor is planned once the engine stabilizes (see roadmap).
+Requires Node.js 22 or newer. Open the files in `examples/out/` in any browser to see
+the animation. The web editor (M4) will run in any mobile browser; a Capacitor APK shell
+around it is planned once the engine stabilizes (see roadmap).
 
 ## Clean-room policy
 
@@ -62,7 +64,8 @@ Layering rule: `core` depends on nothing; `svg` and `export` depend on `core`; `
 - [x] **M0** — repository, clean-room policy, functional spec
 - [x] **M1** — engine kernel: keyframes, easing, value types (number, vector, color, path),
   sampling, timeline math, scene model ([packages/core](packages/core/README.md))
-- [ ] **M2** — SVG pipeline + animated SVG (SMIL/CSS) exporters
+- [x] **M2** — SVG pipeline + animated SVG (SMIL/CSS) exporters
+  ([packages/svg](packages/svg), [packages/export](packages/export))
 - [ ] **M3** — CLI (`build`, `export`, `serve`) + Termux quick-start guide
 - [ ] **M4** — web editor (Preact/Lit, no heavy toolchain): canvas, layers, animators, timeline
 - [ ] **M5** — MCP server, Lottie + video exporters, APK shell
