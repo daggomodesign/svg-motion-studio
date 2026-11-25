@@ -1,0 +1,26 @@
+{
+  "name": "@svg-motion-studio/player",
+  "version": "0.0.1",
+  "description": "Standalone player: turn a scene into one self-contained HTML file with play, pause and replay controls.",
+  "type": "module",
+  "license": "MIT",
+  "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test dist/test/"
+  },
+  "dependencies": {
+    "@svg-motion-studio/core": "0.0.1",
+    "@svg-motion-studio/export": "0.0.1"
+  },
+  "devDependencies": {
+    "@svg-motion-studio/presets": "^0.0.1",
+    "@types/node": "^20.14.0",
+    "typescript": "^5.5.0"
+  }
+}

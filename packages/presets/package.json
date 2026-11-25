@@ -1,0 +1,25 @@
+{
+  "name": "@svg-motion-studio/presets",
+  "version": "0.0.1",
+  "description": "Animation recipes: ready-made animators (fade, slide, pop, spin, pulse, float, wiggle, draw, bounce, shake) and auto-animate for imported drawings.",
+  "type": "module",
+  "license": "MIT",
+  "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test dist/test/"
+  },
+  "dependencies": {
+    "@svg-motion-studio/core": "0.0.1",
+    "@svg-motion-studio/svg": "0.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "typescript": "^5.5.0"
+  }
+}

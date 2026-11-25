@@ -1,0 +1,24 @@
+{
+  "name": "@svg-motion-studio/editor",
+  "version": "0.0.1",
+  "description": "Mobile-first web editor: import a drawing, animate it on a timeline, export animated SVG. Runs in any browser, including Android.",
+  "type": "module",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "build": "tsc -p tsconfig.json --noEmit && node build.mjs",
+    "test": "node --test dist/test/"
+  },
+  "dependencies": {
+    "@svg-motion-studio/core": "0.0.1",
+    "@svg-motion-studio/svg": "0.0.1",
+    "@svg-motion-studio/export": "0.0.1",
+    "@svg-motion-studio/import": "0.0.1",
+    "@svg-motion-studio/player": "0.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "esbuild": "^0.28.0",
+    "typescript": "^5.5.0"
+  }
+}

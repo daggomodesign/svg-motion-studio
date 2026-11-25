@@ -1,0 +1,30 @@
+{
+  "name": "@svg-motion-studio/cli",
+  "version": "0.0.1",
+  "description": "Command-line studio: import a drawing, animate it with presets, export animated SVG. Runs on Node.js, including Termux on Android.",
+  "type": "module",
+  "license": "MIT",
+  "bin": {
+    "sms": "./dist/src/cli.js"
+  },
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test dist/test/"
+  },
+  "dependencies": {
+    "@svg-motion-studio/core": "0.0.1",
+    "@svg-motion-studio/svg": "0.0.1",
+    "@svg-motion-studio/export": "0.0.1",
+    "@svg-motion-studio/import": "0.0.1",
+    "@svg-motion-studio/presets": "0.0.1",
+    "@svg-motion-studio/player": "0.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "typescript": "^5.5.0"
+  }
+}

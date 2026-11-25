@@ -1,0 +1,25 @@
+{
+  "name": "@svg-motion-studio/import",
+  "version": "0.0.1",
+  "description": "Import pipeline: turn CorelDRAW, Inkscape and Illustrator SVG exports into clean, animatable documents. Pure TypeScript — no DOM, no Node APIs.",
+  "type": "module",
+  "license": "MIT",
+  "main": "./dist/src/index.js",
+  "types": "./dist/src/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "npm run build && node --test dist/test/"
+  },
+  "dependencies": {
+    "@svg-motion-studio/core": "0.0.1",
+    "@svg-motion-studio/svg": "0.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.14.0",
+    "typescript": "^5.5.0"
+  }
+}

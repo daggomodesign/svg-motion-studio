@@ -9,4 +9,6 @@
 export * from './xml.js';
 export * from './dom.js';
 export * from './canvas.js';
+export * from './transform.js';
+export * from './bbox.js';
 export * from './bind.js';
